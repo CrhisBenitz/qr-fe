@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>QR Generator</title>
+</head>
+<body>
+  <h1>QR Code Generator</h1>
+  <form id="qrForm">
+    <input type="text" name="text" placeholder="Enter URL" required><br>
+    Foreground: <input type="color" name="color" value="#000000"><br>
+    Background: <input type="color" name="bg" value="#ffffff"><br>
+    Size (1–20): <input type="number" name="size" value="10"><br>
+    <button type="submit">Generate</button>
+  </form>
+  <br>
+  <img id="qrImage" style="max-width:300px;"/>
+  <script>
+    const form = document.getElementById('qrForm');
+    form.onsubmit = async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const params = new URLSearchParams([...formData.entries()]);
+      const url = `https://YOUR-BACKEND-RENDER-URL/qr?${params}`;
+      document.getElementById('qrImage').src = url;
+    };
+  </script>
+</body>
+</html>
