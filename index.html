@@ -21,7 +21,7 @@
       e.preventDefault();
       const formData = new FormData(form);
       const params = new URLSearchParams([...formData.entries()]);
-      const url = `https://YOUR-BACKEND-RENDER-URL/qr?${params}`;
+      const url = `https://qr-be-8fux.onrender.com/qr-be?${params}`;
       document.getElementById('qrImage').src = url;
     };
   </script>
