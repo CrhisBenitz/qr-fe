@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const hiddenInput = document.getElementById(`${baseId}-ip`);
 
         if (checkbox?.checked && hiddenInput) {
-          btn.style.backgroundColor = AColorPicker.parseColor(color, "hex");
-          hiddenInput.value = AColorPicker.parseColor(color, "hex");
-          console.log(AColorPicker.parseColor(color, "hex"));
+          btn.style.backgroundColor = color;
+          hiddenInput.value = color;
         }
   });
 
