@@ -16,33 +16,38 @@
 
     <fieldset style="flex-grow: 2;">
 
-      <div id="qrCode" style="border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; width: 80%; max-width: 80%; aspect-ratio: 1; margin: 10% 10% 10% 10%;">
+      <div id="qrCode" style="border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; width: 90%; max-width: 80%; aspect-ratio: 1; margin: 10% 10% 10% 10%;">
         <span style="color: #999;">QR will appear here</span>
+      </div>
+
+      <div class="row-2col" style="display: flex; align-items: center; justify-content: center; width: 94%; max-width: 94%;  margin: 3% 3% 3% 3%;">
+        <button type="submit">Generate QR</button>
+        <button type="button" id="shareBtn">Share QR</button>
       </div>
 
     </fieldset>
 
     <!-- MAIN QR STYLING -->
 
-    <fieldset style="flex-grow: 2;">
+    <fieldset style="flex-grow: 3;">
       <legend>Main QR Styling</legend>
 
       <label for="text">Text</label>
       <input type="text" id="text" name="text" style="width: 100%;" placeholder="Enter text" required="">
 
       <div class="row-3col">
-        <div class="field-group">
+        <div class="field-group"  style="flex-shrink: 2;">
           <label for="main-color"> <input type="checkbox" id="main-color-cb" name="main-color-cb"> Color <button type="button" class="color-button" data-target="color" id="main-color-bt" style="background-color: rgb(0,0,0);"></button>
           </label>
           <input type="hidden" name="main-color" id="main-color-ip" value="rgb(0,0,0)">
         </div>
-        <div class="field-group">
+        <div class="field-group" style="flex-shrink: 2;">
           <label for="main-bg"><input type="checkbox" id="main-bg-cb" name="main-bg-cb"> BG <button type="button" class="color-button" data-target="color" id="main-bg-bt" style="background-color: rgb(255,255,255);"></button>
           </label>
           <input type="hidden" name="main-bg" id="main-bg-ip" value="rgb(255,255,255)">
         </div>
         <div class="field-group">
-          <label for="main-drawer">Drawer</label>
+          <label for="main-drawer">Mod
           <select name="main-drawer" id="main-drawer">
             <option value="squares">Squares</option>
             <option value="circles">Circles</option>
@@ -51,6 +56,7 @@
             <option value="vertical-bars">Vertical Bars</option>
             <option value="horizontal-bars">Horizontal Bars</option>
           </select>
+          </label>
         </div>
       </div>
 
@@ -60,19 +66,19 @@
       <legend>Inner Eyes</legend>
 
         <div class="row-3col">
-          <div class="field-group">
+          <div class="field-group" style="flex-shrink: 2;">
             <label for="innereyes-color"> <input type="checkbox" id="innereyes-color-cb" name="innereyes-color-cb"> Color <button type="button" class="color-button" data-target="color" id="innereyes-color-bt" style="background-color: rgb(0,0,0);"></button>
             </label>
-            <input type="hidden" name="innereyes-color" id="innereyes-color-ip" value="rgb(0,0,0)">
+            <input type="hidden" name="innereyes-color" id="innereyes-color-ip" value="None">
           </div>
-          <div class="field-group">
+          <div class="field-group" style="flex-shrink: 2;">
             <label for="innereyes-bg"><input type="checkbox" id="innereyes-bg-cb" name="innereyes-bg-cb"> BG <button type="button" class="color-button" data-target="color" id="innereyes-bg-bt" style="background-color: rgb(255,255,255);"></button>
             </label>
-            <input type="hidden" name="innereyes-bg" id="innereyes-bg-ip" value="rgb(255,255,255)">
+            <input type="hidden" name="innereyes-bg" id="innereyes-bg-ip" value="None">
           </div>
 
           <div class="field-group">
-            <label for="innereyes-drawer">Drawer</label>
+            <label for="innereyes-drawer">Mod
             <select name="innereyes-drawer" id="innereyes-drawer">
               <option value="squares">Squares</option>
               <option value="circles">Circles</option>
@@ -81,6 +87,7 @@
               <option value="vertical-bars">Vertical Bars</option>
               <option value="horizontal-bars">Horizontal Bars</option>
             </select>
+            </label>
           </div>
         </div>
 
@@ -88,19 +95,21 @@
       <legend>Outer Eyes</legend>
 
         <div class="row-3col">
-          <div class="field-group">
+
+          <div class="field-group" style="flex-shrink: 2;">
             <label for="outereyes-color"> <input type="checkbox" id="outereyes-color-cb" name="outereyes-color-cb"> Color <button type="button" class="color-button" data-target="color" id="outereyes-color-bt" style="background-color: rgb(0,0,0);"></button>
             </label>
-            <input type="hidden" name="outereyes-color" id="outereyes-color-ip" value="rgb(0,0,0)">
+            <input type="hidden" name="outereyes-color" id="outereyes-color-ip" value="None">
           </div>
-          <div class="field-group">
+
+          <div class="field-group" style="flex-shrink: 2;">
             <label for="bg"><input type="checkbox" id="outereyes-bg-cb" name="outereyes-bg-cb"> BG <button type="button" class="color-button" data-target="color" id="outereyes-bg-bt" style="background-color: rgb(255,255,255);"></button>
             </label>
-            <input type="hidden" name="outereyes-bg" id="outereyes-bg-ip" value="rgb(255,255,255)">
+            <input type="hidden" name="outereyes-bg" id="outereyes-bg-ip" value="None">
           </div>
 
           <div class="field-group">
-            <label for="outereyes-drawer">Drawer</label>
+            <label for="outereyes-drawer">Mod
             <select name="outereyes-drawer" id="outereyes-drawer">
               <option value="squares">Squares</option>
               <option value="circles">Circles</option>
@@ -109,34 +118,48 @@
               <option value="vertical-bars">Vertical Bars</option>
               <option value="horizontal-bars">Horizontal Bars</option>
             </select>
+            </label>
           </div>
         </div>
+
+    <legend>Logo and Mask</legend>
+      <div class="row-2col">
+
+        <div class="field-group" style="flex-shrink: 2;">
+          <label for="imageURL">Mask Image URL: <input id="imageURL" name="imageURL" placeholder="https://example.com/mask.png" style="width: 100%;"></label>
+
+        </div>
+      </div>
+      <div class="row-2col">
+
+        <div class="field-group" style="flex-shrink: 2;">
+          <label for="logoURL">Logo URL: <input id="logoURL" name="logoURL" placeholder="https://example.com/logo.png" style="width: 100%;"></label>
+
+        </div>
+      </div>
+
       </fieldset>
 
     <fieldset style="flex-shrink: 2;">
       <div class="picker" id="picker-color"
-         acp-color="#ff0000"
+         acp-color="#9f136d"
          acp-show-hex
          acp-palette="PALETTE_MATERIAL_500"></div>
     </fieldset>
 
   </div>
 
-  <button type="submit">Generate QR Code</button>
+
 </form>
-  <br>
-  <img id="qrImage" style="max-width:30vw;"/>
-  <script>
-    const form = document.getElementById('qrForm');
-    form.onsubmit = async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const params = new URLSearchParams([...formData.entries()]);
-      const url = `http://127.0.0.1:5000/qr-be?${params}`;
-      const qrContainer = document.getElementById("qrCode");
-      qrContainer.innerHTML = `<img src="${url}" alt="QR Code" style="max-width: 100%; max-height: 100%;">`;
-      // qrContainer.innerHTML = `"${url}"`;
-    };
-  </script>
+
+<!-- <iframe
+  src="https://sketchpad.app"
+  width="100%"
+  height="600"
+  style="border: none;"
+  allowfullscreen>
+</iframe> -->
+
+
 </body>
 </html>
