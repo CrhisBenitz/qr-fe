@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const formData = new FormData(form);
       const params = new URLSearchParams([...formData.entries()]);
-      const url = `http://127.0.0.1:5000/qr-be?${params}`;
+      // const url = `http://127.0.0.1:5000/qr-be?${params}`;
+      const url = `https://qr-be-8fux.onrender.com/qr-be?${params}`;      
       const qrContainer = document.getElementById("qrCode");
       qrContainer.innerHTML = `<img src="${url}" alt="QR Code" style="max-width: 100%; max-height: 100%;">`;
       // qrContainer.innerHTML = `"${url}"`;
